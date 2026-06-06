@@ -9,6 +9,27 @@
 {"method": "post", "url": "/todoist/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "d3bqrcC"}}
 {"method": "post", "url": "/file_system/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "7w[90e6"}}
 {"method": "post", "url": "/phone/auth/token", "data": {"username": "3947324235", "password": "-R0_%58"}}
-{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE", "query": "subject:(meeting cancellation)"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_inbox_threads"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_thread"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_inbox_threads"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_thread"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_email"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "show_alarms"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "update_alarm"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_inbox_threads"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_thread"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_email"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "show_alarms"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "update_alarm"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_inbox_threads"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_thread"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_email"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "show_alarms"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "phone", "api_name": "update_alarm"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE"}}
 {"method": "get", "url": "/phone/alarms", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSszOTQ3MzI0MjM1IiwiZXhwIjoxNjg0NzQ2OTcxfQ.kW5nish-B7YIe6I4IIQpVfxAu3zEioZm9dwfiAFjmKg"}}
-{"method": "post", "url": "/supervisor/message", "data": {"answer": "One-on-One with Alex White, One-on-One with Catherine Smith"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": null}}

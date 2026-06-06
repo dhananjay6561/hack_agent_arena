@@ -1,8 +1,10 @@
 ──────────────────────────────── Overall Stats ─────────────────────────────────
-Num Passed Tests : 3
-Num Failed Tests : 7
+Num Passed Tests : 4
+Num Failed Tests : 6
 Num Total  Tests : 10
 ──────────────────────────────────── Passes ────────────────────────────────────
+>> Passed Requirement
+assert answers match.
 >> Passed Requirement
 obtain added, updated, removed splitwise.Expense records using
 models.changed_records,
@@ -14,22 +16,6 @@ and assert 0 were updated or removed.
 >> Passed Requirement
 assert all added expense shares have expense_id matching the added expenses.
 ──────────────────────────────────── Fails ─────────────────────────────────────
->> Failed Requirement
-assert answers match.
-```python
-with test(
-    """
-    assert answers match.
-    """
-):
-    test.answer(predicted_answer, ground_truth_answer)
-```
-----------
-AssertionError:
-'no cable bill expenses were found. please check your email for cable bills and
-try again.'
-==
-'null'
 >> Failed Requirement
 assert model changes match splitwise.Expense, splitwise.ExpenseShare,
 splitwise.Notification,
@@ -49,12 +35,12 @@ splitwise.Notification,
 AssertionError:
 set()
 ==
-{'splitwise.ExpenseShare', 'splitwise.Expense', 'splitwise.Notification',
-'gmail.Attachment'}
+{'splitwise.Notification', 'splitwise.Expense', 'gmail.Attachment',
+'splitwise.ExpenseShare'}
 
 In right but not left:
-['splitwise.ExpenseShare', 'splitwise.Expense', 'splitwise.Notification',
-'gmail.Attachment']
+['splitwise.Notification', 'splitwise.Expense', 'gmail.Attachment',
+'splitwise.ExpenseShare']
 >> Failed Requirement
 assert all added expenses have group_id matching private_data.group_id.
 ```python

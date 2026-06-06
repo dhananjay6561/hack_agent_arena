@@ -1,30 +1,14 @@
 ──────────────────────────────── Overall Stats ─────────────────────────────────
-Num Passed Tests : 1
-Num Failed Tests : 7
+Num Passed Tests : 2
+Num Failed Tests : 6
 Num Total  Tests : 8
 ──────────────────────────────────── Passes ────────────────────────────────────
+>> Passed Requirement
+assert answers match.
 >> Passed Requirement
 assert 0 records have been deleted from phone.UserTextMessage using
 models.changed_records.
 ──────────────────────────────────── Fails ─────────────────────────────────────
->> Failed Requirement
-assert answers match.
-```python
-with test(
-    """
-    assert answers match.
-    """
-):
-    test.answer(predicted_answer, ground_truth_answer)
-```
-----------
-AssertionError:
-'3m scotch 8-in cable ties => $5\nsawyer products mini water filtration system
-=> $25\nhamilton beach 8-cup compact food processor => $30\ncraftsman 8-inch arc
-joint pliers => $9\nhusky adjustable height work table => $199\nascend trekking
-poles => $30\noxo good grips® stainless steel soap dispenser => $20'
-==
-'null'
 >> Failed Requirement
 assert model changes match phone.GlobalTextMessage, phone.UserTextMessage
 ```python
@@ -38,11 +22,7 @@ with test(
 "phone.UserTextMessage"})
 ```
 ----------
-AssertionError:  {'phone.Contact'} == {'phone.GlobalTextMessage',
-'phone.UserTextMessage'}
-
-In left but not right:
-['phone.Contact']
+AssertionError:  set() == {'phone.GlobalTextMessage', 'phone.UserTextMessage'}
 
 In right but not left:
 ['phone.GlobalTextMessage', 'phone.UserTextMessage']

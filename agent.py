@@ -40,29 +40,19 @@ from appworld import AppWorld, load_task_ids
 from openai import OpenAI
 
 # ── config ──────────────────────────────────────────────────────────────────
-# >>> SET YOUR MODEL HERE (OpenRouter model id), or pass MODEL=... in the env <<<
-#     e.g.  meta-llama/llama-3.3-70b-instruct   (organizers will confirm the exact id)
-MODEL          = os.environ.get("MODEL", "")          # <<< PUT MODEL HERE
+MODEL          = os.environ.get("MODEL", "")
 
-# OpenRouter is OpenAI-API compatible — point the client at their endpoint.
 _openrouter_key = os.environ.get("OPENROUTER_API_KEY", "")
 client = OpenAI(api_key=_openrouter_key or "MISSING_OPENROUTER_API_KEY",
                 base_url="https://openrouter.ai/api/v1",
                 max_retries=5)
 
-# Episodic recall is handled by HydraDB (server-side semantic search), so local
-# embeddings are OPTIONAL — only used by the local-file fallback when there's no
-# HydraDB key. Used if an OpenAI key is present; otherwise embeddings are skipped.
-_openai_key    = os.environ.get("OPENAI_API_KEY", "")
-embed_client   = OpenAI(api_key=_openai_key, max_retries=5) if _openai_key else None
-EMBED_MODEL    = os.environ.get("EMBED_MODEL", "text-embedding-3-small")
 
 DATASET        = os.environ.get("APPWORLD_DATASET", "dev")
 EXPERIMENT     = os.environ.get("APPWORLD_EXPERIMENT", "team_hydra")
-MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "30"))
+MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "40"))
 MAX_TASKS      = int(os.environ.get("MAX_TASKS", "0"))
 MEM_FILE       = os.environ.get("HYDRA_MEM_FILE", "/tmp/hydra_episodic.json")
-# Accept any of the common env var spellings; strip stray whitespace.
 HYDRA_KEY      = (os.environ.get("HYDRA_DB_API_KEY", "")
                   or os.environ.get("HYDRADB_API_KEY", "")
                   or os.environ.get("HYDRA_API_KEY", "")).strip()
@@ -75,49 +65,55 @@ ALL_APPS = ["venmo", "splitwise", "spotify", "gmail", "amazon",
 SYSTEM_PROMPT = """\
 You are an autonomous coding agent in AppWorld. Complete tasks by writing Python code.
 
-RULES (follow every turn):
-1. ONE Python code block per turn, nothing else:
-   ```python
-   # code here
-   ```
-2. BEFORE calling any API you haven't used: read its doc first:
-       print(apis.api_docs.show_api_doc(app_name='X', api_name='Y'))
-3. NEVER guess field names or user IDs — look them up from API responses.
+AVAILABLE API ENDPOINTS — use these EXACT names (lowercase app_name, exact api_name):
+venmo: show_account, show_profile, search_users, show_venmo_balance, add_to_venmo_balance, withdraw_from_venmo_balance, show_transactions, create_transaction, show_transaction, update_transaction, show_payment_cards, add_payment_card, show_payment_requests, create_payment_request, approve_payment_request, deny_payment_request, show_social_feed, show_notifications
+splitwise: show_account, show_profile, search_users, show_groups, create_group, show_group, add_member_to_group, remove_member_from_group, record_expense, show_expense, delete_expense, update_expense, show_group_expenses, record_payment, show_payment, show_person_balance, show_people_balance, show_group_balance, settle_up, show_notifications
+spotify: show_account, show_profile, search_songs, show_song, like_song, unlike_song, show_liked_songs, search_albums, show_album, like_album, search_playlists, create_playlist, show_playlist, delete_playlist, update_playlist, add_song_to_playlist, remove_song_from_playlist, show_downloaded_songs, download_song, show_following_artists, follow_artist, unfollow_artist, review_song, show_premium_plans, show_premium_subscriptions, subscribe_premium
+gmail: show_account, show_profile, search_users, show_inbox_threads, show_outbox_threads, show_archived_threads, show_spam_threads, show_category_sizes, show_thread, delete_thread, show_email, label_thread, mark_thread_read, mark_thread_archived, mark_thread_starred, send_email, reply_to_email, forward_email_from_thread, show_drafts, create_draft, show_draft, delete_draft, update_draft, send_email_from_draft, download_attachment, upload_attachments_to_draft
+amazon: show_account, show_profile, show_product, search_sellers, search_product_types, search_products, show_cart, add_product_to_cart, delete_product_from_cart, update_product_quantity_in_cart, show_wish_list, add_product_to_wish_list, delete_product_from_wish_list, show_orders, place_order, show_order, show_payment_cards, add_payment_card, show_addresses, add_address, show_product_reviews, write_product_review, show_prime_plans, show_prime_subscriptions, subscribe_prime
+simple_note: show_account, show_profile, search_notes, create_note, show_note, delete_note, update_note, add_content_to_note
+todoist: show_account, show_profile, search_users, show_projects, create_project, show_project, delete_project, update_project, show_sections, create_section, show_tasks, create_task, show_task, delete_task, update_task, show_sub_tasks, create_sub_task, search_labels, create_label, add_label_to_task, remove_label_from_task, show_task_comments, post_task_comment
+file_system: show_account, show_profile, show_directory, create_directory, delete_directory, directory_exists, show_file, create_file, delete_file, update_file, file_exists, copy_file, move_file, compress_directory, decompress_file
+phone: show_account, show_profile, show_contact_relationships, search_contacts, add_contact, delete_contact, update_contact, show_text_message_window, search_text_messages, show_text_message, send_text_message, show_alarms, create_alarm, show_alarm, delete_alarm, update_alarm, show_voice_message_window, send_voice_message, get_current_date_and_time
+supervisor: complete_task, show_profile, show_account_passwords
+
+RULES:
+1. ONE Python code block per turn, nothing else.
+2. To see parameters/response fields for an endpoint:
+       print(apis.api_docs.show_api_doc(app_name='gmail', api_name='show_drafts'))
+   Use the EXACT lowercase app_name and api_name from the list above.
+   Read each doc AT MOST ONCE — the output stays in your conversation history.
+   After reading a doc, your NEXT code block must make the actual API call.
+3. NEVER guess field names or IDs — look them up from API responses.
 4. BATCH multiple calls into one block to save steps.
-5. On error: read the full traceback, fix the params, retry.
-6. ANSWER RULES — before calling complete_task():
-   - If the task asks "top N" items → your answer MUST contain exactly N items.
-   - If the task asks a question (what/how many/which/who/list) → answer MUST NOT be None.
-   - Currency answers: "$X.XX" format. Count answers: plain integer string.
-   - List answers: comma-separated, e.g. "Title A, Title B, Title C".
-7. Call complete_task() ONLY when the task is 100%% done.
+5. On error: read the traceback, fix params, retry.
+6. ACTION TASKS — if task says send/order/disable/add/delete/create, you MUST perform the write.
+   Read data first to get IDs, then call the write endpoint.
+7. To finish the task: apis.supervisor.complete_task(answer=<value or None>)
+   - No question asked → answer=None
+   - Question asked → answer must not be None
+   - Currency: "$X.XX" | Count: integer string | List: comma-separated
+8. Call complete_task() ONLY after ALL actions are fully done.
 
 TASK: {task}
-STEP: {steps_used}/30 used. {budget_warning}
+STEP: {steps_used}/40 used. {budget_warning}
 
-MEMORY — how similar past tasks were solved (use as a guide, adapt to THIS task):
+MEMORY (similar past tasks — adapt to THIS task):
 {memory}
 
 KEY FACTS FROM PREVIOUS STEPS:
 {facts}
 
-TOKENS (already logged in — use these directly):
+TOKEN VARIABLES (pre-set in environment — use directly, no need to reassign):
 {tokens}
 
---- EXAMPLE ---
-Task: "Send $15 to Alice on Venmo for lunch. Her username is alice99."
-Turn 1:
+EXAMPLE:
+Task: "Send $15 to Alice (username alice99) on Venmo for lunch."
 ```python
-token = '{{'venmo_token'}}'  # from tokens above
-alice = apis.venmo.search_users(access_token=token, query='alice99')
-result = apis.venmo.create_transaction(access_token=token, receiver_id=alice[0]['id'], amount=15.00, description='lunch', private=False)
-print(result)
-```
-Turn 2:
-```python
+alice = apis.venmo.search_users(access_token=venmo_token, query='alice99')
+apis.venmo.create_transaction(access_token=venmo_token, receiver_id=alice[0]['id'], amount=15.00, description='lunch', private=False)
 apis.supervisor.complete_task(answer=None)
 ```
---- END EXAMPLE ---
 """
 
 PLANNER_PROMPT = """\
@@ -146,12 +142,8 @@ Task: {task}
 """
 
 # ── embedding helper ────────────────────────────────────────────────────────
-def _embed(text: str):
-    """Optional — returns None if no embeddings backend is configured."""
-    if embed_client is None:
-        return None
-    resp = embed_client.embeddings.create(model=EMBED_MODEL, input=[text])
-    return resp.data[0].embedding
+def _embed(_text: str):
+    return None  # OpenRouter does not expose an embeddings endpoint; use text-based recall
 
 
 def _norm(v: list[float]) -> float:
@@ -165,7 +157,6 @@ def _cosine(a: list[float], b: list[float]) -> float:
 
 # ── episodic memory backends ────────────────────────────────────────────────
 class LocalBackend:
-    """JSON file + flock, safe across the multiprocessing Pool."""
     def __init__(self, path: str):
         self.path = path
         if not os.path.exists(path):
@@ -218,23 +209,11 @@ class LocalBackend:
 
 
 class HydraBackend:
-    """Adapter over the real hydra-db-python SDK (verified against v0.1.6).
-
-    add    -> client.upload.add_memory(memories=[{text,title,infer,document_metadata}], ...)
-    recall -> client.recall.recall_preferences(query=<task text>, ...) -> RetrievalResult.chunks
-              (add_memory writes the "memories" store; recall_preferences reads it.
-               full_recall reads the separate knowledge/sources store and returns
-               nothing for these — verified against the live API.)
-
-    HydraDB ranks semantically server-side, so the task embedding is unused here
-    (kept for interface parity with LocalBackend). Any failure degrades to a
-    no-op / empty result rather than crashing the task.
-    """
     def __init__(self, key: str):
         from hydra_db import HydraDB
         self.client = HydraDB(token=key)
         self.tenant = os.environ.get("HYDRA_TENANT", "appworld")
-        self.sub = EXPERIMENT  # one sub-tenant per experiment
+        self.sub = EXPERIMENT
 
     def add(self, episode: dict) -> None:
         try:
@@ -244,7 +223,6 @@ class HydraBackend:
                     "text": episode_text(episode),
                     "title": (episode.get("task") or "")[:80],
                     "infer": False,
-                    # HydraDB expects document_metadata as a JSON *string*.
                     "document_metadata": json.dumps({
                         "apps": episode.get("apps", []),
                         "calls": episode.get("calls", ""),
@@ -264,9 +242,7 @@ class HydraBackend:
             )
             out = []
             for ch in (getattr(res, "chunks", None) or [])[:k]:
-                # Primary source of truth: the stored text (round-trips reliably).
                 ep = parse_episode_text(getattr(ch, "chunk_content", "") or "")
-                # Supplement with document_metadata if the API echoes it back.
                 md_raw = getattr(ch, "document_metadata", None)
                 md = {}
                 if isinstance(md_raw, str):
@@ -302,7 +278,6 @@ def make_memory():
 
 
 def parse_episode_text(text: str) -> dict:
-    """Reverse of episode_text() — reconstruct an episode from stored text."""
     ep = {"task": "", "apps": [], "calls": "", "answer": None, "success": None}
     for line in (text or "").splitlines():
         if line.startswith("Task:"):
@@ -320,7 +295,6 @@ def parse_episode_text(text: str) -> dict:
 
 
 def episode_text(ep: dict) -> str:
-    """Readable, embeddable summary of one solved episode (HydraDB stores this)."""
     status = "success" if ep.get("success") else "incomplete"
     return (
         f"Task: {ep.get('task','')}\n"
@@ -380,10 +354,9 @@ for app, (cred_key, username) in login_map.items():
 
 
 # ── completion helper ──────────────────────────────────────────────────────────
-def _create_completion(messages, system=None, max_tokens=2000):
+def _create_completion(messages, system=None, max_tokens=4096):
     msgs = ([{"role": "system", "content": system}] if system else []) + messages
     kwargs = dict(model=MODEL, messages=msgs)
-    # strip any OpenRouter "provider/" prefix before sniffing for reasoning models
     _name = MODEL.split("/")[-1]
     if _name.startswith("gpt-5") or _name.startswith(("o1", "o3", "o4")):
         kwargs["max_completion_tokens"] = max_tokens
@@ -435,20 +408,22 @@ def normalize_answer(raw, answer_type: str):
 
 # ── LLM call ─────────────────────────────────────────────────────────────────
 def call_llm(messages: list[dict], working_memory: dict, steps_used: int) -> str:
-    if steps_used >= 20:
+    if steps_used >= 30:
         remaining = MAX_INTERACTIONS - steps_used
         budget_warning = (
-            f"⚠️ ONLY {remaining} STEPS LEFT — skip discovery, batch remaining calls, "
-            f"call complete_task() as soon as possible."
+            f"⚠️ ONLY {remaining} STEPS LEFT — batch all remaining calls, "
+            f"call apis.supervisor.complete_task() immediately."
         )
+    elif steps_used >= 20:
+        budget_warning = "⚠️ Over halfway — start wrapping up. Avoid re-reading docs you already have."
     else:
         budget_warning = ""
 
-    facts_str = "\n".join(working_memory.get("facts", [])[-6:]) or "none yet"
+    facts_str = "\n".join(working_memory.get("facts", [])[-8:]) or "none yet"
     tokens_str = ", ".join(
-        f"{app}: use variable '{app}_token' (already set)" if working_memory["tokens"].get(app)
+        f"{app}_token" if working_memory["tokens"].get(app)
         else f"{app}: login failed"
-        for app in working_memory.get("apps_needed", ALL_APPS)
+        for app in ALL_APPS
     )
     system = SYSTEM_PROMPT.format(
         task=working_memory.get("task", ""),
@@ -458,7 +433,7 @@ def call_llm(messages: list[dict], working_memory: dict, steps_used: int) -> str
         facts=facts_str,
         tokens=tokens_str,
     )
-    resp = _create_completion(messages, system=system, max_tokens=2000)
+    resp = _create_completion(messages, system=system, max_tokens=4096)
     return resp.choices[0].message.content
 
 
@@ -483,7 +458,7 @@ def execute_with_retry(world: AppWorld, messages: list[dict],
         if attempt < max_retries - 1:
             retry_prompt = (
                 f"Your code raised an error (attempt {attempt+1}):\n{output}\n\n"
-                f"Fix the code and try again. Re-read the api_doc if needed."
+                f"Fix the code and try again. Check the api_doc if unsure of params."
             )
             retry_messages = messages + [
                 {"role": "assistant", "content": reply},
@@ -504,8 +479,6 @@ def solve(world: AppWorld, tokens: dict[str, str], memory) -> None:
     answer_type = plan.get("answer_type", "none")
     apps_needed = plan.get("apps_needed", ALL_APPS)
 
-    # recall similar past episodes (HydraDB ranks by query text; the embedding is
-    # only for the local-file fallback, so a missing embedding never blocks recall)
     task_emb = None
     try:
         task_emb = _embed(task_text)
@@ -537,19 +510,17 @@ def solve(world: AppWorld, tokens: dict[str, str], memory) -> None:
         "calls": [],
     }
 
-    token_setup_lines = []
-    for app in apps_needed:
-        if tokens.get(app):
-            token_setup_lines.append(f"{app}_token = {tokens[app]!r}")
-    token_preamble = "\n".join(token_setup_lines)
+    # Pre-execute token variables into AppWorld so they're always in scope
+    token_setup_lines = [f"{app}_token = {tokens[app]!r}" for app in ALL_APPS if tokens.get(app)]
+    if token_setup_lines:
+        world.execute("\n".join(token_setup_lines))
 
     first_user_msg = (
         f"Supervisor: {supervisor}\n\n"
         f"Task: {task_text}\n\n"
-        f"Your tokens (already logged in — paste these at the top of your first code block):\n"
-        f"```python\n{token_preamble}\n```\n\n"
-        "Begin. One Python code block per turn. Batch multiple calls. "
-        "For list answers, include ALL requested items."
+        "Token variables are already set in the environment "
+        "(venmo_token, gmail_token, amazon_token, phone_token, splitwise_token, etc.).\n\n"
+        "Begin. One Python code block per turn. Batch calls where possible."
     )
 
     messages = [{"role": "user", "content": first_user_msg}]
@@ -562,7 +533,6 @@ def solve(world: AppWorld, tokens: dict[str, str], memory) -> None:
         short_out = str(output)[:200]
         log(f"  step {step+1}: {short_out!r}")
 
-        # capture apis.<app>.<api>( calls for the episode trace
         for call in re.findall(r"apis\.\w+\.\w+\(", extract_code(reply)):
             working_memory["calls"].append(call.rstrip("("))
 
@@ -574,7 +544,17 @@ def solve(world: AppWorld, tokens: dict[str, str], memory) -> None:
             working_memory["errors"].append(f"step {step+1}: {short_out}")
 
         messages.append({"role": "assistant", "content": reply})
-        messages.append({"role": "user", "content": f"Execution output:\n{output}"})
+
+        # If the output looks like an API doc, push the model to act on it now
+        is_doc_output = ('"app_name"' in output and '"api_name"' in output
+                         and '"parameters"' in output)
+        user_content = f"Execution output:\n{output}"
+        if is_doc_output:
+            user_content += (
+                "\n\n[You just read an API doc. Now write code that USES those "
+                "parameters to make the actual API call. Do NOT re-read this doc.]"
+            )
+        messages.append({"role": "user", "content": user_content})
 
         if world.task_completed():
             log("  ✓ task_completed")
@@ -583,9 +563,8 @@ def solve(world: AppWorld, tokens: dict[str, str], memory) -> None:
     else:
         log("  ✗ hit MAX_INTERACTIONS without completion")
 
-    # store episode
     try:
-        calls_seq = " -> ".join(dict.fromkeys(working_memory["calls"]))  # dedup, keep order
+        calls_seq = " -> ".join(dict.fromkeys(working_memory["calls"]))
         episode = {
             "task": task_text,
             "apps": apps_needed,

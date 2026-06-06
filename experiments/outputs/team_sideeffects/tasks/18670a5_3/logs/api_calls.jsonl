@@ -9,30 +9,21 @@
 {"method": "post", "url": "/todoist/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "vRf+92J"}}
 {"method": "post", "url": "/file_system/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "YUmI+0Z"}}
 {"method": "post", "url": "/phone/auth/token", "data": {"username": "7228796993", "password": "QsxhMHd"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
 {"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
 {"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_all_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_all_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
-{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
-{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
-{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
-{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
-{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes/2101", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes/2099", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes/3085", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/simple_note/notes/3084", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs"}}
 {"method": "post", "url": "/supervisor/message", "data": {"answer": null}}

@@ -18,7 +18,7 @@ with test(
     test.answer(predicted_answer, ground_truth_answer)
 ```
 ----------
-AssertionError:  'no valid payment cards found.' == 'null'
+AssertionError:  '<<not_given>>' == 'null'
 >> Failed Requirement
 assert model changes match
 amazon.Product, amazon.Order, amazon.OrderItem,
@@ -41,14 +41,14 @@ gmail.Email,
 AssertionError:
 set()
 ==
-{'amazon.Order', 'gmail.GlobalEmailThread', 'file_system.Directory',
-'gmail.Email', 'gmail.Attachment', 'amazon.OrderItem', 'amazon.Product',
-'file_system.File', 'amazon.WishListEntry', 'gmail.UserEmailThread'}
+{'gmail.GlobalEmailThread', 'amazon.WishListEntry', 'gmail.Email',
+'amazon.Product', 'gmail.Attachment', 'gmail.UserEmailThread', 'amazon.Order',
+'amazon.OrderItem', 'file_system.Directory', 'file_system.File'}
 
 In right but not left:
-['amazon.Order', 'gmail.GlobalEmailThread', 'file_system.Directory',
-'gmail.Email', 'gmail.Attachment', 'amazon.OrderItem', 'amazon.Product',
-'file_system.File', 'amazon.WishListEntry', 'gmail.UserEmailThread']
+['gmail.GlobalEmailThread', 'amazon.WishListEntry', 'gmail.Email',
+'amazon.Product', 'gmail.Attachment', 'gmail.UserEmailThread', 'amazon.Order',
+'amazon.OrderItem', 'file_system.Directory', 'file_system.File']
 >> Failed Requirement
 assert 1 record has been added to amazon.Order using models.changed_records.
 ```python
