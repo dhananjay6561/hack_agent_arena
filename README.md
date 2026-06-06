@@ -8,7 +8,7 @@ AppWorld agent submission for the Agents Arena Hackathon (sponsored by HydraDB).
 | **Model** | `meta-llama/llama-3.3-70b-instruct` (via OpenRouter) |
 | **Eval set** | `agent_arena_eval` (official 10-task set, 3 easy / 3 medium / 4 hard) |
 | **HydraDB used?** | **Yes** — cross-task episodic memory (see below) |
-| **Self-reported TGC / SGC** | _see `experiments/outputs/team_sideeffects/evaluations/agent_arena_eval.json`_ |
+| **Self-reported TGC / SGC** | `10.0 / 10.0` |
 
 ## The agent (`agent.py`)
 A Plan–Execute–Verify ReAct code agent:
