@@ -49,12 +49,12 @@ splitwise.Notification,
 AssertionError:
 set()
 ==
-{'splitwise.ExpenseShare', 'gmail.Attachment', 'splitwise.Expense',
-'splitwise.Notification'}
+{'splitwise.ExpenseShare', 'splitwise.Expense', 'splitwise.Notification',
+'gmail.Attachment'}
 
 In right but not left:
-['splitwise.ExpenseShare', 'gmail.Attachment', 'splitwise.Expense',
-'splitwise.Notification']
+['splitwise.ExpenseShare', 'splitwise.Expense', 'splitwise.Notification',
+'gmail.Attachment']
 >> Failed Requirement
 assert all added expenses have group_id matching private_data.group_id.
 ```python

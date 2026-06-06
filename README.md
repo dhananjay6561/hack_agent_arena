@@ -1,14 +1,14 @@
-# ://agent_arena — Team `side_effects`
+# ://agent_arena — Team `sideeffects`
 
 AppWorld agent submission for the Agents Arena Hackathon (sponsored by HydraDB).
 
 | | |
 |---|---|
-| **Team name** | `side_effects` |
+| **Team name** | `sideeffects` |
 | **Model** | `meta-llama/llama-3.3-70b-instruct` (via OpenRouter) |
 | **Eval set** | `agent_arena_eval` (official 10-task set, 3 easy / 3 medium / 4 hard) |
 | **HydraDB used?** | **Yes** — cross-task episodic memory (see below) |
-| **Self-reported TGC / SGC** | _see `experiments/outputs/team_side_effects/evaluations/agent_arena_eval.json`_ |
+| **Self-reported TGC / SGC** | _see `experiments/outputs/team_sideeffects/evaluations/agent_arena_eval.json`_ |
 
 ## The agent (`agent.py`)
 A Plan–Execute–Verify ReAct code agent:
@@ -36,13 +36,13 @@ bash setup.sh && source .venv/bin/activate
 #   OPENROUTER_API_KEY=...      (provider)
 #   HYDRA_API_KEY=...           (HydraDB)
 #   MODEL=meta-llama/llama-3.3-70b-instruct
-export APPWORLD_EXPERIMENT=team_side_effects
+export APPWORLD_EXPERIMENT=team_sideeffects
 export APPWORLD_DATASET=agent_arena_eval MAX_TASKS=0
 python agent.py
-appworld evaluate team_side_effects agent_arena_eval
+appworld evaluate team_sideeffects agent_arena_eval
 ```
 
-Outputs (for verification) are in `experiments/outputs/team_side_effects/`, including
+Outputs (for verification) are in `experiments/outputs/team_sideeffects/`, including
 `evaluations/agent_arena_eval.json` and each task's `tasks/<id>/dbs/`.
 
 See [`SUBMISSION.md`](SUBMISSION.md) and [`EVAL.md`](EVAL.md) for the official format.
