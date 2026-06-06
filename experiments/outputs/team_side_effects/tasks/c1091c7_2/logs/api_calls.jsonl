@@ -1,0 +1,14 @@
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/venmo/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "8^x3#y8"}}
+{"method": "post", "url": "/splitwise/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "sym1-bX"}}
+{"method": "post", "url": "/spotify/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "!Y@Bv&B"}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "5klQTSt"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "U4ndtM1"}}
+{"method": "post", "url": "/simple_note/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "nT]NcWO"}}
+{"method": "post", "url": "/todoist/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "d3bqrcC"}}
+{"method": "post", "url": "/file_system/auth/token", "data": {"username": "ce-maldonado@gmail.com", "password": "7w[90e6"}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "3947324235", "password": "-R0_%58"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtjZS1tYWxkb25hZG9AZ21haWwuY29tIiwiZXhwIjoxNjg0NzQ3MTAzfQ.wveZFlNqiUz2OwoLcHiJSML4Vnt8fWcwjRAXqy-otIE", "query": "subject:(meeting cancellation)"}}
+{"method": "get", "url": "/phone/alarms", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSszOTQ3MzI0MjM1IiwiZXhwIjoxNjg0NzQ2OTcxfQ.kW5nish-B7YIe6I4IIQpVfxAu3zEioZm9dwfiAFjmKg"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": "One-on-One with Alex White, One-on-One with Catherine Smith"}}

@@ -1,0 +1,38 @@
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/venmo/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "=#dOpGE"}}
+{"method": "post", "url": "/splitwise/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "1IfBZBx"}}
+{"method": "post", "url": "/spotify/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "s]C22hx"}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "Ubom@Nj"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "5+=z(GQ"}}
+{"method": "post", "url": "/simple_note/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "2$=C=WK"}}
+{"method": "post", "url": "/todoist/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "vRf+92J"}}
+{"method": "post", "url": "/file_system/auth/token", "data": {"username": "dav.mart@gmail.com", "password": "YUmI+0Z"}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "7228796993", "password": "QsxhMHd"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_note"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "show_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "list_all_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_all_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "get_note"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "simple_note", "api_name": "search_notes"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
+{"method": "get", "url": "/simple_note/notes", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzaW1wbGVfbm90ZStkYXYubWFydEBnbWFpbC5jb20iLCJleHAiOjE2ODQ2NzY4Njl9.tL6swzWrIxNJ3C3Wn1FIjIwv72k-PvdOdFT1APp1xGs", "query": "meeting"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": null}}

@@ -1,0 +1,83 @@
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/venmo/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "$LRYdG7"}}
+{"method": "post", "url": "/splitwise/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "mD5-IE2"}}
+{"method": "post", "url": "/spotify/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "MPzz6^n"}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "p5%#xC5"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "post", "url": "/simple_note/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "nwrDB{O"}}
+{"method": "post", "url": "/todoist/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "ItI_3PU"}}
+{"method": "post", "url": "/file_system/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "$0a_HKP"}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "retrieve_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_user_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlist_items"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlist"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "list_wishlists"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_user_wishlists"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_wishlists"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_user_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_user_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_user_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_user_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_addresses"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "create_order"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "place_order"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_addresses"}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 1, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": null, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 1, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": null, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 220, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 220, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_payment_cards"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 220, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 220, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/orders", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "payment_card_id": 220, "address_id": 99}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/amazon/payment_cards", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": "No valid payment cards found."}}

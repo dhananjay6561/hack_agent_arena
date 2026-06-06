@@ -1,0 +1,27 @@
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/venmo/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "+){p}(9"}}
+{"method": "post", "url": "/splitwise/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": ")^_ixpD"}}
+{"method": "post", "url": "/spotify/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "@BfHM4T"}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "W%wsM+p"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "@#@wvsw"}}
+{"method": "post", "url": "/simple_note/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "85${X=c"}}
+{"method": "post", "url": "/todoist/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "eRlD2Ci"}}
+{"method": "post", "url": "/file_system/auth/token", "data": {"username": "kevin.blac@gmail.com", "password": "]NVpauc"}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "3654328626", "password": "vK6UAEL"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_subscription_status"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_prime_membership"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_subscription_status"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_subscription_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_prime_membership"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_subscription_details"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_prime_membership"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_prime_subscription_status"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_prime_membership"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_prime_subscription"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "show_subscription_info"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_prime_membership_details"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_subscription_status"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "check_prime_membership"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "amazon", "api_name": "get_subscription_status"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": 10}}

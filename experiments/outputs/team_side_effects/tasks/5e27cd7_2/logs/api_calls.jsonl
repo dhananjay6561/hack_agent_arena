@@ -1,0 +1,21 @@
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/venmo/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "B)]&d{u"}}
+{"method": "post", "url": "/splitwise/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "]aOK-3Z"}}
+{"method": "post", "url": "/spotify/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "aHOM-+d"}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "u%TW7ah"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "!#i62}T"}}
+{"method": "post", "url": "/simple_note/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "Q=srh$w"}}
+{"method": "post", "url": "/todoist/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "ffqROlZ"}}
+{"method": "post", "url": "/file_system/auth/token", "data": {"username": "kat_simp@gmail.com", "password": "0rE1V#a"}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "6727300099", "password": "4_%505T"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_drafts"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "delete_draft"}}
+{"method": "get", "url": "/gmail/drafts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIxNTd9.bZQjIORkHF9Ay6Jl-Uk_xl78Ka0vheyz7dPD7m88kyw"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "show_drafts"}}
+{"method": "get", "url": "/api_docs/api_doc", "data": {"app_name": "gmail", "api_name": "delete_draft"}}
+{"method": "get", "url": "/gmail/drafts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIxNTd9.bZQjIORkHF9Ay6Jl-Uk_xl78Ka0vheyz7dPD7m88kyw"}}
+{"method": "get", "url": "/gmail/drafts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIxNTd9.bZQjIORkHF9Ay6Jl-Uk_xl78Ka0vheyz7dPD7m88kyw"}}
+{"method": "delete", "url": "/gmail/drafts/27", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIxNTd9.bZQjIORkHF9Ay6Jl-Uk_xl78Ka0vheyz7dPD7m88kyw"}}
+{"method": "delete", "url": "/gmail/drafts/85", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIxNTd9.bZQjIORkHF9Ay6Jl-Uk_xl78Ka0vheyz7dPD7m88kyw"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": null}}
